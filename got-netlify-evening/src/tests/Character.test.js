@@ -39,6 +39,7 @@ describe('Character Component Content Structure', () => {
         expect(nameHeader.length).toBe(1)
     })
 
+    
     it("Renders a img for the Character", () => {
 
         const charImg = findByTestAttr(wrapper, 'char-img')
