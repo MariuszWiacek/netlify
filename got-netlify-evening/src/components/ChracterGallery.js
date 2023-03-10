@@ -1,19 +1,15 @@
-import React from "react";
-import Character from "./Character";
-
-import peopleInfo from "../data/characterData.json";
+import React from 'react'
+import characterData from '../data/characterData.json'
+import Character from '../components/Character'
 
 const CharacterGallery = () => {
-    const characterComponentArray = peopleInfo.map(
-        c => <Character {...c} key={c._id} />
-    )
-
+    const characterList = characterData.map(character => <Character {...character} key={character.id} />)
     return (
-        <div data-test="component-char-gallery">
-            {characterComponentArray}
-
+        <div
+            className='gallery-container' data-test='char-gallery'>
+            {characterList}
         </div>
-    )
-}
+    );
+};
 
 export default CharacterGallery;
